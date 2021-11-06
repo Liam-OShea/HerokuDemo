@@ -1,8 +1,10 @@
 const express = require('express'); //Line 1
 const app = express(); //Line 2
 const port = process.env.PORT || 5000; //Line 3
+var path = require('path');
 
 app.use(express.static("public"))
+
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
 
@@ -11,4 +13,8 @@ app.get('/express_backend', (req, res) => { //Line 9
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
 }); //Line 11
 
+
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "build", "index.html"));
+})
 
