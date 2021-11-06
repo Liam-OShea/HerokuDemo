@@ -2,6 +2,7 @@
   "name": "heroku-demo",
   "version": "0.1.0",
   "main": "app.js",
+  "homepage":"https://liam-demo.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
