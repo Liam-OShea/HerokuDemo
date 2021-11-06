@@ -3,7 +3,7 @@ const app = express(); //Line 2
 const port = process.env.PORT || 5000; //Line 3
 var path = require('path');
 
-app.use(express.static("public"))
+app.use(express.static(path.join(__dirname, '/build')));
 
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
